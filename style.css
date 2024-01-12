@@ -240,11 +240,11 @@ h2 span{
 
 
 .skills h2{
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 
 .skills-container{
-    margin-top: 10rem;
+    margin-top: 6rem;
     display: flex;
     justify-content: center;
     gap: 1.3rem;
