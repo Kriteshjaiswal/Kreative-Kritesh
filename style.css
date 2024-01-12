@@ -247,8 +247,7 @@ h2 span{
     margin-top: 10rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.3rem;
 }
 
 .skill-bar{
