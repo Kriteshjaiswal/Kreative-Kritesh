@@ -244,6 +244,7 @@ h2 span{
 }
 
 .skills-container{
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     gap: 1.3rem;
