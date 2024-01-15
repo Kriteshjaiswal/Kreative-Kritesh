@@ -18,35 +18,6 @@
 };
 
 
-// Top button JS
-
-
-
-let calcScrollValue = () => {
-    let scrollProgress = document.getElementById("progress");
-    let progressValue = document.getElementById("progress-value");
-    let pos = document.documentElement.scrollTop;
-    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollValue = Math.round((pos * 100) / calcHeight);
-    
-    if(pos > 100){
-        scrollProgress.style.display = "grid";
-    }
-    else{
-        scrollProgress.style.display = "none";
-    }
-
-    scrollProgress.addEventListener("click" , () => {
-        document.documentElement.scrollTop = 0;
-    });
-    scrollProgress.style.background = `conic-gradient(var(--main-color) ${scrollValue}% , var(--bg-color) ${scrollValue}%)`;
-};
-
-
-this.window.onscroll = calcScrollValue;
-this.window.onload = calcScrollValue;
-
-
 
 
 // Progress Line Js redial style
@@ -174,12 +145,24 @@ window.onscroll = () => {
         };
     });
 
-    let header = document.querySelector('header');
+    // scroll effect on header and top scroll button
+    
+   let header = document.querySelector('header');
+    let topBtn = document.getElementById('progress');
     header.classList.toggle('sticky', window.scrollY > 100);
+    window.onscroll = () => {
+        if(window.scrollY > 100){
+            topBtn.style.display = 'grid';
+        }
 
+        else{
+            topBtn.style.display = 'none';
+        }
+    };
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+
 
 
 // Scroll Reveal
