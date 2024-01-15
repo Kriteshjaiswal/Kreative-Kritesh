@@ -94,25 +94,19 @@ h2 span{
     position: fixed;
     bottom: 20px;
     right: 10px;
-    height: 70px;
-    width: 70px;
-    display: grid;
+    height: 60px;
+    width: 60px;
+    display: none;
+    background: rgba(0, 238, 255, 0.477);
+    box-shadow: 0 0 1rem rgba(0, 238, 255, 0.587);
     place-items: center;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+    border-radius: 30%;
     cursor: pointer;
     z-index: 100;
 }
 #progress-value{
-    display: block;
-    height:calc(100% - 15px);
-    width:calc(100% - 15px);
-    background: var(--second-bg-color);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 3rem;
-    color: var(--main-color);
+    font-size: 4rem;
+    color: var(--second-bg-color);
 }
 
 
