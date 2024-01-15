@@ -150,15 +150,12 @@ window.onscroll = () => {
    let header = document.querySelector('header');
     let topBtn = document.getElementById('progress');
     header.classList.toggle('sticky', window.scrollY > 100);
-    window.onscroll = () => {
-        if(window.scrollY > 100){
-            topBtn.style.display = 'grid';
-        }
-
-        else{
-            topBtn.style.display = 'none';
-        }
-    };
+   if(window.scrollY > 100){
+        topBtn.style.display = 'grid';
+    }
+    else{
+        topBtn.style.display = 'none';
+    }
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
