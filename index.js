@@ -18,6 +18,9 @@
 };
 
 
+// Top button JS
+
+
 
 
 // Progress Line Js redial style
@@ -130,6 +133,7 @@ function readMore(btn){
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -145,12 +149,10 @@ window.onscroll = () => {
         };
     });
 
-    // scroll effect on header and top scroll button
-    
-   let header = document.querySelector('header');
+    let header = document.querySelector('header');
     let topBtn = document.getElementById('progress');
     header.classList.toggle('sticky', window.scrollY > 100);
-   if(window.scrollY > 100){
+    if(window.scrollY > 100){
         topBtn.style.display = 'grid';
     }
     else{
@@ -160,8 +162,15 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+// Dark mode Button
+const themeBtn = document.querySelector(".theme-btn");
 
+themeBtn.addEventListener('click' , () => {
+    document.body.classList.toggle('day-theme');
 
+    themeBtn.querySelector('span:first-child').classList.toggle('active');
+    themeBtn.querySelector('span:last-child').classList.toggle('active');
+})
 // Scroll Reveal
 
 ScrollReveal({ 
@@ -174,4 +183,4 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .heading', { origin:'top'});
 ScrollReveal().reveal('.home-image, .services-container, .portfolio-box , .contact form ', { origin:'bottom'});
 ScrollReveal().reveal(' .home-content h1, .about-img, .skill-bar, .whatsaap', { origin:'left'});
-ScrollReveal().reveal('.social-media, .home-content p, .about-content, .container, .mail', { origin:'right'});
+ScrollReveal().reveal('.social-media, .home-content p, .about-content, .container, .mail, .progress', { origin:'right'});
