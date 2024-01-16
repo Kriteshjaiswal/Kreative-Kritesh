@@ -61,6 +61,7 @@ section:nth-child(odd){
     cursor: default;
     
 } 
+
 .logo a span{
     padding : 0rem 0.4rem;
     margin-right: 0.4rem;
@@ -75,12 +76,49 @@ nav a{
     transition: all 500ms ease;
 }
 
+
 nav a:hover,
 nav a.active,
 .home-content h3 span,
 h2 span{
     color: var(--main-color);
 }
+
+.w-btn{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.theme-btn{
+    display: flex;
+    justify-content: end;
+    background: var(--second-bg-color);
+    width: 10rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+.theme-btn span {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.3rem;
+}
+.theme-btn .active{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+.day-theme{
+    --bg-color: #f0eff5;
+    --second-bg-color: #ffffff;
+    --text-color:#27282f;
+    --main-color:#c001ff;
+}
+
 #menu-icon{
     font-size: 3rem;
     color: var(--text-color);
@@ -97,8 +135,8 @@ h2 span{
     height: 60px;
     width: 60px;
     display: none;
-    background: rgba(0, 238, 255, 0.477);
-    box-shadow: 0 0 1rem rgba(0, 238, 255, 0.587);
+    background: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
     place-items: center;
     border-radius: 30%;
     cursor: pointer;
@@ -108,7 +146,6 @@ h2 span{
     font-size: 4rem;
     color: var(--second-bg-color);
 }
-
 
 .home{
     display: flex;
@@ -234,19 +271,19 @@ h2 span{
 
 
 .skills h2{
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 .skills-container{
-    margin-top: 2rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
-    gap: 1.3rem;
+    gap: 2rem;
 }
 
 .skill-bar{
 width: 75rem;
-background: #14242d86;
+background: var(--bg-color);
 border: rgba(0, 0, 0, 0.24) 1px solid;
 border-radius: 2rem;
 padding: 4rem 4.5rem;
@@ -384,7 +421,7 @@ box-shadow: 0 0 .8rem var(--bg-color);
     height: 16rem;
     width: 16rem;
     border-radius: 50%;
-    background: conic-gradient(var(--main-color) 3.6deg,#ffffff4c 0deg);
+    background: conic-gradient(var(--main-color) 3.6deg, #6e727a 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -640,7 +677,7 @@ footer .button span{
     }
 
     .header{
-        min-width: 49rem;
+        min-width: 44rem;
     }
     .nav-bar{
         min-width:49rem;
@@ -657,8 +694,6 @@ footer .button span{
     .nav-bar.active{
         display: block;
     }
-    
-
     .nav-bar a{
         display: block;
         font-size: 2rem;
